@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>heatmapper-js engine demo</title>
+        <script src="./heatmap.js" type="text/javascript"></script>
+        <script>generateCoordMap();</script>
+        <style>
+            body{
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+            }
+            body a {
+                text-decoration: none;
+                color: #888;
+            }
+            body a:hover {
+                text-decoration: underline;
+            }
+            main {
+                padding: 10px;
+                width: 1000px;
+                margin: 0 auto;
+                background-color: #fafafa;
+                min-height: 100%;
+            }
+            button {
+                margin: 0 auto;
+                text-align: center;
+                padding: 6px 12px;
+                background-color: #eee;
+                border: 1px solid #ddd;
+            }
+            button:hover {
+                border-color: orange;
+                cursor: pointer;
+            }
+            span.playground{
+                font-family: 'Comic Sans MS';
+                font-size: 142px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div id="logo">
+                    heatmap demo
+                </div>
+               
+            </header>
+            <article>
+                <p>
+                    Welcome! This is a demonstration on how you can use this script to generate heatmaps based on mouse movements.
+                </p>
+                <p>
+                    As you read this, your mouse movements are being tracked on screen. Feel free to move your mouse around and hit the "Display Heat Map"
+                    button to see this script in action. This script utilizes canvas and creates a PNG on the fly.
+                </p>
+            <span class="playground">4 &nbsp; 9 &nbsp; 0</span>
+            <p>
+                Experiment by using your mouse to trace over the numbers above and then click Display Heat Map!
+                This can be done same using eye tracking techniques later!
+            </p>
+            <button id="displayHeatMap" onclick="generateHeatMap('result', {maxWidth: 1000});">Display Heat Map</button><br /><br />
+            <div id="result"></div>
+        </main>
+    </body>
+</html>
